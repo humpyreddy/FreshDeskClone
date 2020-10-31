@@ -14,30 +14,48 @@
           </a>
             <!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span> -->
 
-          <div class="container">
-            <div class="col-lg-12">
+
+            <div class="container">
+            <div class="col-lg-12 p-5">
               <form>
+                <!-- Name -->
                 <div class="form-group">
-                  <label class="labels" for="issue-title">Title</label>
-                  <input type="text" class="form-control" id="issue-title" name="issue-title" placeholder="Issue Title">
+                  <label class="labels" for="name">Name</label>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Full Name">
                 </div>
+               
+                <!-- Email/Requestor ID--> 
                 <div class="form-group">
-                  <label class="labels" for="issue-title">Email</label>
+                  <label class="labels" for="email">Email</label>
                   <input type="email" class="form-control" id="email" name="email" placeholder="email address">
                 </div>
-                <div class="form-group">
-                  <label class="labels" for="description">Description</label>
-                  <textarea class="form-control" rows="5" id="description" placeholder="Describe your problem here"></textarea>
-                </div>
-                <div class="form-group">
-                  <label class="labels" for="contact">Contact Name</label>
-                  <input type="text" class="form-control" id="contact-name" name="contact-name" placeholder="Name">
-                </div>
+
+                <!-- Phone -->
                 <div class="form-group">
                   <label class="labels" for="phone">Contact Number</label>
                   <input type="number" class="form-control" id="contact-number" name="contact-number" placeholder="Name">
                 </div>
-                <button id="submitTicket" onclick="submitTicket()" class="btn btn-lg btn-block btn-outline-primary" type="button">Submit Ticket</button>
+
+                 <!-- Job Title -->
+                 <div class="form-group">
+                  <label class="labels" for="job-title">Job Title</label>
+                  <input type="text" class="form-control" id="job-title" name="job-title" placeholder="Job Title">
+                </div>
+
+                <!-- Subject -->
+                <div class="form-group">
+                  <label class="labels" for="subject">Subject</label>
+                  <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                </div>
+
+                <!-- Description -->
+
+                <div class="form-group">
+                  <label class="labels" for="description">Description</label>
+                  <textarea class="form-control" rows="5" id="description" placeholder="Describe your problem here"></textarea>
+                </div>
+               
+                <button type="button" onclick="submitTicket()" class="btn btn-lg btn-block btn-outline-primary" >Submit Ticket</button>
 
               </form>
              
@@ -45,9 +63,6 @@
           </div>
          </div>
 
-           
-        
-          <script src="script.js"></script>
-          <script src="ticket.js"></script>
+          <script src="src/ticket.js"></script>
     </body>
 </html>
