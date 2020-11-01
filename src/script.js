@@ -63,6 +63,11 @@ let renderTickets = (tickets)=>{
         username.classList.add("card-subtitle" , "text-muted");
         username.innerText=name;
         card_body.append(username)
+
+        row.addEventListener("click",function(){
+            window.location = "/viewticket.html?id="+id;
+
+        })
   }
 
 }
@@ -79,7 +84,7 @@ let addRow =()=>{}
 
 let addTicketButton = document.getElementById("addTicket");
 addTicketButton.addEventListener("click",()=>{
-    location.href = "/ticket.html";
+    location.href = "/addticket.html";
 })
 
 
