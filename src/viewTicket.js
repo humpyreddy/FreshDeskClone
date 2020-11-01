@@ -3,8 +3,8 @@ API_KEY = window.btoa(API_KEY);
 let FD_ENDPOINT = "humpyreddy96assist";
 let password = "friends123";
 let ticket_id = getId();
-let PATH = "/api/v2/tickets/"+ticket_id+"?include=requester";
-let URL =  "https://" + FD_ENDPOINT + ".freshdesk.com"+ PATH;
+let PATH = "/api/v2/tickets/"+ticket_id;
+let URL =  "https://" + FD_ENDPOINT + ".freshdesk.com"+ PATH+"?include=requester";
 
 
 function getId (){
@@ -39,18 +39,24 @@ const ticketDescription = async ()=>{
         document.getElementById("subject").innerText = ticketData.subject;
         document.getElementById("description").innerText = ticketData.description_text;
 
+        let edit = document.getElementById("edit");
+        edit.addEventListener("click",()=>{
+            document.getElementById("name").style.visibility="hidden";
+            document.createElement
+        })
+
 }
 ticketDescription();
 
-PATH = "/api/v2/tickets/"+ticket_id;
-URL1 =  "https://" + FD_ENDPOINT + ".freshdesk.com"+ PATH;
+let URL_delete =  "https://" + FD_ENDPOINT + ".freshdesk.com"+ PATH
 
 let deleteTicket = ()=>{
     deleteTicketData();
+    window.location = "/index.html"
 }
 
 const deleteTicketData  = async ()=>{
-    const result = await fetch(URL1,{
+    const result = await fetch(URL_delete,{
         method:'DELETE',
         mode:'cors',
         headers: {
