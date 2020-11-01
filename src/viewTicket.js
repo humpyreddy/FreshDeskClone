@@ -55,17 +55,9 @@ const ticketDescription = async ()=>{
 ticketDescription();
 
 let renderEditTicket = (name,subject,description)=>{
-        document.getElementById("name").style.visibility="hidden";
         document.getElementById("description").style.visibility="hidden"
         document.getElementById("subject").style.visibility="hidden"
         document.getElementById("update").disabled = false
-        //name
-        let name_input = document.createElement("input");
-        name_input.setAttribute("id","name_input")
-        name_input.setAttribute("type","text");
-        name_input.setAttribute("value",name)
-        let name_item = document.getElementById("name-")
-        name_item.append(name_input)
         //subject
         let subject_input = document.createElement("input");
         subject_input.setAttribute("id","subject_input")
@@ -85,10 +77,10 @@ let renderEditTicket = (name,subject,description)=>{
 }
 
 let updateTicket = ()=>{
-    let name = document.getElementById("name_input").value
     let subject = document.getElementById("subject_input").value
     let description = document.getElementById("desc_input").value
     updateTicketData(name,subject,description);
+     window.location = "index.html"
 
 }
 
@@ -103,7 +95,6 @@ let updateTicketData = async (name,subject,description)=>{
             'Authorization' : 'Basic ' + API_KEY + ':' + password
              },
         body: JSON.stringify({
-            name : name,
             subject:subject,
             description:description
         })
