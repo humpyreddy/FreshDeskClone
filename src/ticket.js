@@ -34,6 +34,7 @@ let submitTicket = ()=>{
 
    
     createTicket(ticketDetails);
+    window.location = "index.html"
     
 }
 
